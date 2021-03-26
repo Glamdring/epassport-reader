@@ -1,20 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main"
-    tools:context="bg.bozho.emrtdreader.MainActivity">
 
-    <TextView
-        android:text="eMRTD Reader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_main"
+        tools:context="bg.bozho.emrtdreader.MainActivity">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eMRTD Reader" />
+
+        <TextView
+            android:id="@+id/passportnr_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passport/ID number" />
+
+        <EditText
+            android:id="@+id/passportnr"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/dateOfBirth_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth" />
+
+        <DatePicker
+            android:id="@+id/dateOfBirth"
+            android:datePickerMode="spinner"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/dateOfExpiration_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Expiry" />
+
+        <DatePicker
+            android:id="@+id/dateOfExpiration"
+            android:datePickerMode="spinner"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/scanPassport_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan Passport" />
+
+        <Button
+            android:id="@+id/scanPassport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/onfido_white"
+            android:text="Scan"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/passportImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take a selfie" />
+
+        <Button
+            android:id="@+id/takeSelfie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/onfido_white"
+            android:text="Selfie"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/selfieImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ImageView>
+
+        <TextView
+            android:id="@+id/compare_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compare Pictures" />
+
+        <Button
+            android:id="@+id/compare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/onfido_white"
+            android:text="Compare"
+            android:clickable="true" />
+
+
+        <TextView
+            android:id="@+id/results_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+</ScrollView>
