@@ -104,10 +104,10 @@ public class MainActivity extends AppCompatActivity {
 		documentNumberInput.setText(documentNumber);
 
 		dateOfBirthInput = findViewById(R.id.dateOfBirth);
-		dateOfBirthInput.updateDate(1988, 6, 16);
+		dateOfBirthInput.updateDate(1990, 1, 1);
 
 		dateOfExpiryInput = findViewById(R.id.dateOfExpiration);
-		dateOfExpiryInput.updateDate(2022, 4, 10);
+		dateOfExpiryInput.updateDate(2022, 1, 1);
 
 		Button scanNfc = (Button) findViewById(R.id.scanPassport);
 		scanNfc.setOnClickListener(new View.OnClickListener() {
@@ -146,13 +146,6 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				openCamera();
-//				final int REQUEST_IMAGE_CAPTURE = 1;
-//				Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//				try {
-//					startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-//				} catch (ActivityNotFoundException e) {
-//					// display error state to the user
-//				}
 			}
 		});
 
